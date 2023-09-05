@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+/* =========== Nombre de la empresa ========== */
+
+.name {
+    color: #f77f00;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    text-decoration: underline #3a86ff;
+}
+
+/* =========== Carrusel de banners ========== */
+
+.banner {
+    width: 95%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* =========== Títulos ========== */
+
+.title {
+    background-color: #ffffff;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: #fcbf49;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+}
+
+/* =========== cards ========== */
+
+.card-product{
+    width: 70%;
+    border: rgb(120, 120, 120) 1px solid;
+}
+
+.card-header {
+    background-color: #f77f00;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+
+.precio {
+    font-size: 1.1rem;
+    text-align: left;
+    color: #3a86ff;
+}
+
+.card-text{
+    text-align: justify;
+    color: rgb(73, 73, 73);
+}
+
+.card-footer{
+    border-top: rgb(120, 120, 120) 1px solid;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233a86ff' viewBox='0 0 8 10'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233a86ff' viewBox='0 0 8 10'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+/* ===========  Header ============ */
+header {
+    width: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    padding-right: 4rem;
+    border-radius: 5%;
+}
+
+.icon-toggle {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar-brand {
+    padding: 0rem 6rem 0rem 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.custom-navbar {
+    background-color: #fcbf49;
+}
+
+.nav-link {
+    color: white;
+    /* padding-left: 1rem; */
+    font-size: 1.2rem;
+    /* background-color: #3a86ff; */
+    background-color: #f77f00;
+    border-radius: 5px;
+    /* width: 7rem; */
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.15);
+}
+
+.nav-link:hover {
+    font-size: 1.25rem;
+    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.35);
+    color: white;
+}
+
+.nav--icon {
+    font-size: 1rem;
+}
+
+.especial {
+    display: none;
+}
+
+.dropdown-menu,
+.dropdown-item {
+    background-color: #c3c3c3;
+    font-size: 1rem;
+    color: #353028;
+}
+
+.menu-button {
+    margin-right: 1rem;
+    background-color: #3a86ff;
+}
+
+.icon-menu {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/* =========== Main ========== */
+
+.wrapper {
+    flex: 1;
+}
+
+/* =========== Footer ========== */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    background-color: #f77f00;
+    margin-top: 3rem;
+}
+
+footer ul {
+    margin-bottom: 0;
+}
+
+footer ul li a {
+    padding: 0 1.5rem 0 1.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+
+    header {
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .25);
+    }
+
+    .custom-navbar {
+        background-color: #fcbf49;
+    }
+
+    .navbar-brand {
+        font-size: 1.3em;
+        visibility: hidden;
+    }
+
+    .nav-list {
+        display: none;
+        visibility: hidden;
+    }
+
+    .icon-menu-down {
+        font-size: 1.3rem;
+    }
+
+    .especial {
+        display: contents;
+    }
+
+    .nav-link {
+        padding: .5rem;
+        width: 10rem;
+    }
+
+    .iconoSuperior {
+        display: none;
+    }
+
+    footer {
+        margin-bottom: 45px;
+    }
+
+
+    .nav-table {
+        display: block;
+        visibility: visible;
+    }
+
+    .desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+
+
+@media Screen and (min-width:1024px) {
+
+    .nav-table,
+    .Mobile {
+        display: none;
+        visibility: hidden;
+    }
+}
