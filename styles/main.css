@@ -52,7 +52,7 @@ body {
 
 .card-product {
     width: 70%;
-    border: rgb(120, 120, 120) 1px solid;
+    border: rgb(170, 170, 170) 1px solid;
 }
 
 .card-header {
@@ -73,7 +73,7 @@ body {
 }
 
 .card-footer {
-    border-top: rgb(120, 120, 120) 1px solid;
+    border-top: rgb(170, 170, 170) 1px solid;
 }
 
 .carousel-control-prev-icon {
@@ -83,6 +83,58 @@ body {
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233a86ff' viewBox='0 0 8 10'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
+
+/* ===========  Formas de pago ============ */
+.forma-pago-titulo {
+    padding-left: .3rem;
+    text-align: center;
+    background-color: #275db4;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: .3rem;
+}
+
+.card-pago{
+    border: rgb(170, 170, 170) 1px solid;
+}
+
+.forma-pago-logos-container {
+    justify-content: center;
+    display: flex;
+}
+
+.forma-pago-logo {
+    height: 5rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma-pago-logo img {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.efectivo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.efectivo-container span {
+    padding: 0 1rem 0 1rem;
+}
+
+.efectivo-logo {
+    font-size: 4rem;
+    color: rgb(44, 141, 60);
+}
+
 
 /* ===========  Header ============ */
 header {
@@ -173,10 +225,12 @@ footer {
 
 footer ul {
     margin-bottom: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 footer ul li a {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 2rem 0 2rem;
     font-size: 2rem;
     text-decoration: none;
     color: white;
@@ -190,7 +244,7 @@ footer ul li a {
         border-top-right-radius: 10px 10px
     }
 
-    .navbar{
+    .navbar {
         /* border: 2px red solid; */
         border-top-left-radius: 10px 10px;
         border-top-right-radius: 10px 10px
@@ -214,15 +268,16 @@ footer ul li a {
         visibility: visible;
         display: block;
         margin-left: 2rem;
-        color:#f77f00;
+        color: #f77f00;
         /* font-weight: bold; */
         font-size: 2rem;
     }
 
-    .navbar-toggler:focus{
+    .navbar-toggler:focus {
         text-decoration: none;
         box-shadow: none;
     }
+
     .icon-menu-down {
         font-size: 1.3rem;
     }
