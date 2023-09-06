@@ -23,39 +23,32 @@
             <span class="navbar-brand">
                 <i class="bi bi-shop-window"></i>
             </span>
+            <span class="navbar-menu-title">
+                Menú
+            </span>
 
-            <div class="botones-navbar-mobile">
-
-                <button class="navbar-toggler menu-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="true"
-                    aria-label="Toggle navigation">
-                    <span class="icon-toggle">
-                        <i class="uil uil-apps"></i> Menú
-                    </span>
-                </button>
-
-                <button type="button" class="btn btn-success ">
-                    <a href="https://wa.me/525586832459?text=¡Hola!" class="enlace-whatsapp" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
-                        Pedir
-                    </a>
-                </button>
-            </div>
+            <button class="navbar-toggler menu-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="icon-toggle">
+                    <i class="uil uil-apps"></i>
+                </span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample05">
                 <div class="nav-table">
                     <div class="row row-cols-2 align-items-center">
                         <div class="col d-flex justify-content-center"><span class="icon-menu"><a class="nav-link"
-                                    aria-current="page" href="#Desayunos"><i class="uil uil-utensils-alt"> </i> &nbsp;
+                                    aria-current="page" href="./index.html"><i class="uil uil-utensils-alt"> </i> &nbsp;
                                     Desayunos</a></span></div>
                         <div class="col d-flex justify-content-center"><span class="icon-menu"><a class="nav-link"
-                                    href="#Bebidas"><i class="uil uil-coffee"></i> &nbsp;
+                                    href="./productos.html"><i class="uil uil-coffee"></i> &nbsp;
                                     Bebidas</a></span></div>
                         <div class="col d-flex justify-content-center"><span class="icon-menu"><a class="nav-link"
-                                    href="#Snacks"><i class="uil uil-grin-tongue-wink"></i>
+                                    href="./contacto.html"><i class="uil uil-grin-tongue-wink"></i>
                                     &nbsp; Snack</a></span></div>
                         <div class="col d-flex justify-content-center"><span class="icon-menu"><a class="nav-link"
-                                    href="#Pago"><i class="uil uil-message"></i>&nbsp;Pedir</a></div>
+                                    href="./registroUsuario.html"><i class="uil uil-message"></i>&nbsp;Pedir</a></div>
                     </div>
                 </div>
 
@@ -77,13 +70,12 @@
             </div>
         </nav>
     </header>
-    <!-- ================  MAIN  ================ -->
     <main class="wrapper">
         <h1 class="text-center mt-3 name">Oh-Fresh</h1>
         <!-- ================  CARRUSEL BANNERS ================ -->
         <section>
             <figure class="mx-auto">
-                <div id="carousel-0" class="carousel slide mt-5 mb-5 mx-auto" data-bs-ride="carousel"
+                <div id="carousel-1" class="carousel slide mt-5 mb-5 mx-auto" data-bs-ride="carousel"
                     data-bs-touch="true">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="3500">
@@ -106,32 +98,85 @@
         <section>
             <div class="text-center">
                 <!-- ================  DESAYUNOS  ================ -->
-                <h1 class="title" id="Desayunos"><i class="uil uil-utensils-alt"></i> </i> DESAYUNOS</h1>
+                <h1 class="title"><i class="uil uil-utensils-alt"></i> </i> DESAYUNOS</h1>
 
                 <!-- ========== Carrusel de Desayunos ========== -->
-                <div id="carousel-1" class="carousel slide Mobile" data-bs-touch="true">
-                    <div class="carousel-inner" id="carousel-desayunos"></div>
+                <div id="carousel-2" class="carousel slide Mobile" data-bs-touch="true">
+                    <div class="carousel-inner" id="carousel-desayunos">
+                        
+                    </div>
+                    <!-- ========== Controls ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
 
                 <!-- ================  BEBIDAS  ================ -->
-                <h1 class="title" id="Bebidas"><i class="uil uil-coffee"></i> BEBIDAS</h1>
+                <h1 class="title"><i class="uil uil-coffee"></i> BEBIDAS</h1>
                 <!-- ========== Carrusel de Bebidas ========== -->
                 <div id="carousel-2" class="carousel slide Mobile" data-bs-touch="true">
-                    <div class="carousel-inner" id="carousel-bebidas"></div>
+                    <div class="carousel-inner">
+                        <!-- ========== Slide 1 ========== -->
+                        <div class="carousel-item active">
+                            <!-- Card -->
+                        </div>
+                        <!-- ========== Slide 2 ========== -->
+                        <div class="carousel-item">
+                            <!-- Card -->
+                        </div>
+                    </div>
+                    <!-- ========== Controls ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouse-3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
                 <!-- ================  SNACKS  ================ -->
-                <h1 class="title" id="Snacks"><i class="uil uil-grin-tongue-wink"></i> SNACKS</h1>
+                <h1 class="title"><i class="uil uil-grin-tongue-wink"></i> SNACKS</h1>
 
-                <!-- ========== Carrusel de Snacks ========== -->
-                <div id="carousel-3" class="carousel slide Mobile" data-bs-touch="true">
-                    <div class="carousel-inner" id="carousel-snacks"></div>
+                <!-- ========== Carrusel de Snack ========== -->
+                <div id="carousel-4" class="carousel slide Mobile" data-bs-touch="true">
+                    <div class="carousel-inner">
+                        <!-- ========== Slide 1 ========== -->
+                        <div class="carousel-item active">
+                            <!-- Card -->
+                        </div>
+                        <!-- ========== Slide 2 ========== -->
+                        <div class="carousel-item">
+                            <!-- Card -->
+                        </div>
+                    </div>
+                    <!-- ========== Controls ========== -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouse-4"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-4"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
 
                 <!-- =========== Versiones Desktop =========== -->
                 <div class="row row-cols-1 row-cols-md-4 md-4 g-lg-4 desktop">
                     <div class="col d-flex justify-content-center">
                         <div class="p-3">
-                            <!-- Card -->
+                        <!-- Card -->
                         </div>
                     </div>
 
@@ -140,7 +185,7 @@
         </section>
         <!-- ================  MÉTODOS DE PAGO  ================ -->
         <section>
-            <h1 class="title text-center" id="Pago"><i class="uil uil-wallet"></i> PAGO</h1>
+            <h1 class="title text-center"><i class="uil uil-wallet"></i> PAGO</h1>
             <div class="container">
                 <div class="card card-pago">
                     <div class="card-body">
@@ -148,8 +193,7 @@
                             Al momento de recibir tu pedido, podrás pagar fácilmente con:
                         </p>
                         <!-- ======== Tarjetas de crédito ======== -->
-                        <h4 class="forma-pago-titulo"><i class="uil uil-credit-card"></i> Tarjetas de <br>
-                            Crédito, Débito y Vales</h4>
+                        <h4 class="forma-pago-titulo"><i class="uil uil-credit-card"></i> Tarjetas de crédito</h4>
                         <div class="forma-pago-logos-container">
 
                             <div class="forma-pago-logo">
@@ -166,6 +210,20 @@
                                     alt="logo-American-Express">
                             </div>
 
+                        </div>
+                        <!-- ======== Tarjetas de débito ======== -->
+                        <h4 class="forma-pago-titulo"><i class="uil uil-credit-card"></i> Tarjetas de débito</h4>
+                        <div class="forma-pago-logos-container">
+
+                            <div class="forma-pago-logo">
+                                <img src="https://img.freepik.com/free-icon/visa_318-202971.jpg" alt="visa">
+                            </div>
+
+                            <div class="forma-pago-logo">
+                                <img src="https://i.pinimg.com/736x/56/fd/48/56fd486a48ff235156b8773c238f8da9.jpg"
+                                    alt="master-card">
+                            </div>
+
                             <div class="forma-pago-logo">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Carnet.png" alt="Carnet"
                                     style="border-radius: 5px; width: 4rem;">
@@ -177,7 +235,8 @@
                             </div>
 
                         </div>
-
+                        <!-- ======== Vales ======== -->
+                        <h4 class="forma-pago-titulo"><i class="uil uil-credit-card"></i> Vales</h4>
                         <div class="forma-pago-logos-container">
 
                             <div class="forma-pago-logo">
@@ -195,6 +254,10 @@
                                     alt="logotengox1">
                             </div>
 
+                        </div>
+
+                        <div class="forma-pago-logos-container">
+
                             <div class="forma-pago-logo">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Edenred_Logo.svg/2560px-Edenred_Logo.svg.png"
                                     alt="Edenred_Logo">
@@ -205,7 +268,6 @@
                             </div>
 
                         </div>
-
 
                         <!-- ======== Efectivo ======== -->
                         <h4 class="forma-pago-titulo"><i class="uil uil-money-bill"></i> Efectivo</h4>
@@ -244,7 +306,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main2.js"></script>
 </body>
 
 </html>
