@@ -25,65 +25,141 @@ let desayunos = [
     }
 ];
 
+let bebidas = [
+    {
+        nombre: "Coca-cola",
+        precio: "45.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 1"
+    },
+
+    {
+        nombre: "Chocomilk",
+        precio: "55.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 2"
+    },
+
+    {
+        nombre: "Agua Bonafont",
+        precio: "65.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 3"
+    }
+];
+
+let snacks = [
+    {
+        nombre: "Cheetos",
+        precio: "45.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 1"
+    },
+
+    {
+        nombre: "Cigarros",
+        precio: "55.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 2"
+    },
+
+    {
+        nombre: "Gomitas",
+        precio: "65.00",
+        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 3"
+    }
+];
+
 window.addEventListener("load", function (event) {
     event.preventDefault();
 
-    // Desayunos
-    let carousel_desayunos = document.getElementById('carousel-desayunos')
+    // ++++++++++++++++++ Carruseles de productos ++++++++++++++++++++++++
 
-    // Demás desayunos
-    for (let i = 0; i < desayunos.length; i++) {
-        if (i === 0) {
-            carousel_desayunos.insertAdjacentHTML("afterbegin",
-                `
-            <!-- ========== Slide 1 ========== -->
-            <div class="carousel-item active">
+    let carruseles = this.document.querySelectorAll(".carousel-inner");
+
+    let carousel_desayunos = document.getElementById('carousel-desayunos');
+
+    let carousel_bebidas = document.getElementById('carousel-bebidas');
+
+    let carousel_snacks = document.getElementById('carousel-snacks');
+
+    // Recorrido por cada carrusel para agregar por tipo de productos los elementos de su arreglo correspondiente
+    for (let j = 1; j < carruseles.length; j++) {
+
+        let producto = [];
+        let carousel_producto;
+
+        if (j === 1) {
+            producto = desayunos;
+            carousel_producto=carousel_desayunos;
+        } else if (j === 2) {
+            producto = bebidas;
+            carousel_producto=carousel_bebidas;
+        } else if (j === 3) {
+            producto = snacks;
+            carousel_producto=carousel_snacks;
+        }
+
+        //Para cada tipo de producto se agregará en una card en html, tomando cada objeto de su arreglo correspondiente. El primer producto deberá tener la clase active 
+        for (let i = 0; i < producto.length; i++) {
+            if (i === 0) {
+                carousel_producto.insertAdjacentHTML("afterbegin",
+                    `
+                <!-- ========== Slide 1 ========== -->
+                <div class="carousel-item active">
+                    <div class="card card-product mx-auto">
+                        <div class="card-header">
+                            ${producto[i].nombre}
+                        </div>
+                        <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                        <div class="card-body">
+                            <p class="precio mt-3 mb-1">
+                                Precio: $ ${producto[i].precio}
+                            </p>
+                            <p class="card-text mt-3 mb-3">
+                                ${producto[i].texto}
+                            </p>
+                        </div>
+    
+                    </div>
+                </div>
+            `);
+            } else {
+                carousel_producto.insertAdjacentHTML("beforeend",
+                    `
+            <!-- ========== Slide ${i + 1} ========== -->
+            <div class="carousel-item">
                 <div class="card card-product mx-auto">
                     <div class="card-header">
-                        ${desayunos[i].nombre}
+                        ${producto[i].nombre}
                     </div>
-                    <img src= ${desayunos[i].imagen} class="card-img-top img-producto" alt=${desayunos[i].alt}>
+                    <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
                     <div class="card-body">
                         <p class="precio mt-3 mb-1">
-                            Precio: $ ${desayunos[i].precio}
+                            Precio: $ ${producto[i].precio}
                         </p>
                         <p class="card-text mt-3 mb-3">
-                            ${desayunos[i].texto}
+                            ${producto[i].texto}
                         </p>
                     </div>
-
                 </div>
             </div>
-        `);
-        } else {
-            carousel_desayunos.insertAdjacentHTML("beforeend",
-                `
-        <!-- ========== Slide ${i + 1} ========== -->
-        <div class="carousel-item">
-            <div class="card card-product mx-auto">
-                <div class="card-header">
-                    ${desayunos[i].nombre}
-                </div>
-                <img src= ${desayunos[i].imagen} class="card-img-top img-producto" alt=${desayunos[i].alt}>
-                <div class="card-body">
-                    <p class="precio mt-3 mb-1">
-                        Precio: $ ${desayunos[i].precio}
-                    </p>
-                    <p class="card-text mt-3 mb-3">
-                        ${desayunos[i].texto}
-                    </p>
-                </div>
-            </div>
-        </div>
-        `)
+            `)
+            };
         };
-    };
+    }
 
-    //Controles de carrusel
-    let carruseles=this.document.querySelectorAll(".carousel-inner");
-    
-    for(let i=1;i<carruseles.length;i++){
-        carruseles[i].insertAdjacentHTML("afterend",`
+    //Inserta la estructura de los botones de control de cad carrusel
+
+    for (let i = 1; i < carruseles.length; i++) {
+        carruseles[i].insertAdjacentHTML("afterend", `
         <!-- ========== Controls ${[i]} ========== -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${[i]}"
             data-bs-slide="prev">
@@ -99,20 +175,16 @@ window.addEventListener("load", function (event) {
         `);
     }
 
-    // // Footers
-    // let cards_footer = this.document.querySelectorAll('.card-footer');
-
-    // for (let i = 0; i < cards_footer.length; i++) {
-    //     cards_footer[i].innerHTML = `
-    //     <!-- Mensaje de whatsapp -->
-    //             <button type="button" class="btn btn-outline-success">
-    //                 <a href="https://wa.me/525586832459?text=¡Hola!" class="enlace-whatsapp" target="_blank">
-    //                     <i class="bi bi-whatsapp"></i>
-    //                     Pedir
-    //                 </a>
-    //             </button>
-    //     `;
-    // };
-
 });// window load{}
 
+// Barra de navegación de móviles
+
+const menu_button = document.getElementById('menu-button');
+
+// Agregar event listeners para cerrar el menú al hacer clic en un elemento de navegación
+const nav_link = document.querySelectorAll(".nav-link-mobile"); // Enlaces de navegación
+nav_link.forEach(link => {
+    link.addEventListener("click", () => {
+        menu_button.click();
+    });
+});
