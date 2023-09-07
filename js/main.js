@@ -188,7 +188,7 @@ window.addEventListener("load", function (event) {
     })
 
     Toast.fire({
-        title: '¡Hola, Bienvenid@ 😃!'
+        title: '¡Hola, Bienvenid@! 😃'
     })
 
 });// window load{}

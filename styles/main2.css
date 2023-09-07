@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins&display=swap');
 
+:root{
+/* --primmary-color:#f77f00; */
+--primmary-color:#f77f00;
+--secondary-color:#4f6cb1;
+--border-card-color:#aaaaaa;
+}
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -21,11 +27,24 @@ body {
 
 /* =========== Nombre de la empresa ========== */
 
+.name-container{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
 .name {
-    color: #f77f00;
+    color: var(--primmary-color);
     font-family: 'Oswald', sans-serif;
     font-size: 3.5rem;
-    text-decoration: underline #3a86ff;
+    text-decoration: underline var(--secondary-color);
+}
+
+.name-logo{
+    max-width: 5rem;
+    max-height: 5rem;
+    /* margin-bottom: .7rem; */
+    margin-right: 1rem;
 }
 
 /* =========== Carrusel de banners ========== */
@@ -39,10 +58,10 @@ body {
 /* =========== Títulos ========== */
 
 .title {
-    background-color: #ffffff;
+    background-color: white;
     margin-top: 5rem;
     margin-bottom: 3rem;
-    color: #fcbf49;
+    color: var(--secondary-color);
     border-radius: 5px;
     font-weight: 700;
     font-family: 'Oswald', sans-serif;
@@ -53,19 +72,24 @@ body {
 
 .card-product {
     width: 70%;
-    border: rgb(170, 170, 170) 1px solid;
+    border: var(--border-card-color) 1px solid;
 }
 
 .card-header {
-    background-color: #f77f00;
-    color: rgb(255, 255, 255);
+    background-color: var(--primmary-color);
+    color: white;
     font-size: 1.2rem;
+}
+
+.img-producto{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .precio {
     font-size: 1.1rem;
     text-align: left;
-    color: #3a86ff;
+    color: var(--secondary-color);
 }
 
 .card-text {
@@ -74,7 +98,7 @@ body {
 }
 
 .card-footer {
-    border-top: rgb(170, 170, 170) 1px solid;
+    border-top: var(--border-card-color) 1px solid;
 }
 
 .carousel-control-prev-icon {
@@ -89,7 +113,7 @@ body {
 .forma-pago-titulo {
     padding-left: .3rem;
     text-align: center;
-    background-color: #275db4;
+    background-color: var(--secondary-color);
     color: white;
     font-family: 'Oswald', sans-serif;
     margin-top: 1rem;
@@ -100,7 +124,7 @@ body {
 }
 
 .card-pago{
-    border: rgb(170, 170, 170) 1px solid;
+    border: var(--border-card-color) 1px solid;
 }
 
 .forma-pago-logos-container {
@@ -165,15 +189,15 @@ header {
 }
 
 .custom-navbar {
-    background-color: #fcbf49;
+    background-color: var(--primmary-color);
 }
 
 .nav-link {
     color: white;
     /* padding-left: 1rem; */
     font-size: 1.2rem;
-    /* background-color: #3a86ff; */
-    background-color: #f77f00;
+    /* background-color: var(--secondary-color); */
+    background-color: var(--primmary-color);
     border-radius: 5px;
     /* width: 7rem; */
     text-align: center;
@@ -196,7 +220,7 @@ header {
 .menu-button {
     margin-left: 1rem;
     margin-right: 1rem;
-    background-color: #f77f00;
+    background-color: var(--primmary-color);
     padding: .4rem;
 }
 
@@ -237,7 +261,7 @@ footer {
     padding: 20px;
     justify-content: center;
     display: flex;
-    background-color: #f77f00;
+    background-color: var(--primmary-color);
     margin-top: 3rem;
 }
 

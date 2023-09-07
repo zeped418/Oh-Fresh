@@ -98,13 +98,13 @@ window.addEventListener("load", function (event) {
 
         if (j === 1) {
             producto = desayunos;
-            carousel_producto=carousel_desayunos;
+            carousel_producto = carousel_desayunos;
         } else if (j === 2) {
             producto = bebidas;
-            carousel_producto=carousel_bebidas;
+            carousel_producto = carousel_bebidas;
         } else if (j === 3) {
             producto = snacks;
-            carousel_producto=carousel_snacks;
+            carousel_producto = carousel_snacks;
         }
 
         //Para cada tipo de producto se agregará en una card en html, tomando cada objeto de su arreglo correspondiente. El primer producto deberá tener la clase active 
@@ -174,6 +174,22 @@ window.addEventListener("load", function (event) {
         </button>
         `);
     }
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: false,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    Toast.fire({
+        title: '¡Hola, Bienvenid@! 😃'
+    })
 
 });// window load{}
 
