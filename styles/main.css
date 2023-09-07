@@ -31,6 +31,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: end;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
 .name {
