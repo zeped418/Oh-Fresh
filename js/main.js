@@ -21,7 +21,7 @@ let desayunos = [
 let bebidas = [
     {
         nombre: "Coca-cola 600 ml",
-        precio: "45.00",
+        precio: "20.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         imagen: "https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/5/6/560.jpg",
         alt: "prueba 1"
