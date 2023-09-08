@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins&display=swap');
 
-:root{
-/* --primmary-color:#f77f00; */
---primmary-color:#f77f00;
---secondary-color:#4f6cb1;
---border-card-color:#aaaaaa;
+:root {
+    /* --primmary-color:#f77f00; */
+    --primmary-color: #f77f00;
+    --secondary-color: #4f6cb1;
+    --border-card-color: #aaaaaa;
 }
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -27,7 +28,7 @@ body {
 
 /* =========== Nombre de la empresa ========== */
 
-.name-container{
+.name-container {
     display: flex;
     justify-content: center;
     align-items: end;
@@ -42,7 +43,7 @@ body {
     text-decoration: underline var(--secondary-color);
 }
 
-.name-logo{
+.name-logo {
     max-width: 5rem;
     max-height: 5rem;
 }
@@ -70,6 +71,10 @@ body {
 
 /* =========== cards ========== */
 
+.contador-opciones{
+color: #5c5c5c;
+}
+
 .card-product {
     width: 70%;
     border: var(--border-card-color) 1px solid;
@@ -78,16 +83,33 @@ body {
 .card-header {
     background-color: var(--primmary-color);
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: none;
 }
 
-.img-producto{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.card-body {
+    border-top: none;
+}
+
+.img-producto-container {
+    width: 16rem;
+    height: 12rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-producto {
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: var(--border-card-color) 1px solid;
 }
 
 .precio {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     text-align: left;
     color: var(--secondary-color);
 }
@@ -109,6 +131,71 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233a86ff' viewBox='0 0 8 10'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+/* ===========  Salsas  ===========*/
+.subtitle {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: var(--secondary-color);
+}
+
+.lista-salsas {
+    font-size: 1.4rem;
+    text-align: start
+}
+
+table {
+    margin: auto;
+    background-color: hwb(31 0% 3% / 0.15);
+}
+
+.lista-salsas img {
+    width: 2.5rem;
+    margin: 1rem 1rem 1rem 2rem;
+}
+
+.verde {
+    color: #107446;
+    font-weight: bold;
+    margin: 1rem 0 1rem 0;
+}
+
+.roja {
+    color: #d4010f;
+    font-weight: bold;
+    margin: 1rem 0 1rem 0;
+}
+
+.morita {
+    color: rgb(132, 56, 56);
+    font-weight: bold;
+    margin: 1rem 0 1rem 0;
+}
+
+.heroe-salsa {
+    color: #333;
+    font-weight: normal;
+    margin: 1rem 2rem 1rem 0;
+}
+
+.complementos {
+    /* border: red 1px solid; */
+    text-align: center;
+    padding: 1rem 0.5rem 2rem .5rem;
+
+}
+
+/* ===========  Contacto ============ */
+
+.contacto-container{
+font-size: 1.5rem;
+}
+
+.contact-icon{
+    font-size: 2.5rem;
+    color: #107446;
+    margin-right: 1rem;
+}
+
 /* ===========  Formas de pago ============ */
 .forma-pago-titulo {
     padding-left: .3rem;
@@ -123,7 +210,7 @@ body {
     padding: .3rem;
 }
 
-.card-pago{
+.card-pago {
     border: var(--border-card-color) 1px solid;
 }
 
@@ -229,20 +316,20 @@ header {
     margin: 1rem;
 }
 
-.botones-navbar-mobile{
+.botones-navbar-mobile {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     width: 100%;
     margin: .5rem 0 .5rem 0;
 }
 
-.enlace-whatsapp{
+.enlace-whatsapp {
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #198754;
 }
 
@@ -346,7 +433,7 @@ footer ul li a {
 @media Screen and (min-width:1024px) {
 
     .nav-table,
-    .Mobile{
+    .Mobile {
         display: none;
         visibility: hidden;
     }

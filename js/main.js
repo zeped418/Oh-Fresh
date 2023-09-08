@@ -1,7 +1,7 @@
 // ============   LOAD  =============
 let desayunos = [
     {
-        nombre: "Chilaquiles sencillos",
+        nombre: "Chilaquiles</br>sencillos",
         precio: "45.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
@@ -9,44 +9,37 @@ let desayunos = [
     },
 
     {
-        nombre: "Chilaquiles con pollo",
+        nombre: "Chilaquiles</br>con carne",
         precio: "55.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
         alt: "prueba 2"
     },
 
-    {
-        nombre: "Chilaquiles con Milanesa",
-        precio: "65.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
-        alt: "prueba 3"
-    }
 ];
 
 let bebidas = [
     {
-        nombre: "Coca-cola",
+        nombre: "Coca-cola 600 ml",
         precio: "45.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/5/6/560.jpg",
         alt: "prueba 1"
     },
 
     {
-        nombre: "Chocomilk",
-        precio: "55.00",
+        nombre: "Leche Hershey's",
+        precio: "15.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://superlavioleta.com/cdn/shop/products/LECHEHERSHEYCHOCOLATE236.jpg?v=1597161383",
         alt: "prueba 2"
     },
 
     {
-        nombre: "Agua Bonafont",
-        precio: "65.00",
+        nombre: "Agua Bonafont 1L",
+        precio: "15.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://images.rappi.com.mx/products/b9f56379-c76c-48b3-a654-a17dc3666752.jpg?d=128x128&e=webp&q=70",
         alt: "prueba 3"
     }
 ];
@@ -54,25 +47,25 @@ let bebidas = [
 let snacks = [
     {
         nombre: "Cheetos",
-        precio: "45.00",
+        precio: "15.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://www.tasteboutique.com/cdn/shop/products/Fotos-tienda-en-linea-Feb2023_0024_23_600x.png?v=1676579633",
         alt: "prueba 1"
     },
 
     {
-        nombre: "Cigarros",
-        precio: "55.00",
+        nombre: "KitKat",
+        precio: "20.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://www.pngkit.com/png/full/213-2131521_kitkat-4-fingers-kit-kat.png",
         alt: "prueba 2"
     },
 
     {
         nombre: "Gomitas",
-        precio: "65.00",
+        precio: "15.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "https://cdn.shopify.com/s/files/1/0566/4391/1854/products/7501030452508_a3d15601-48a9-4062-8031-7a7875b68ac3.png?v=1674552060",
         alt: "prueba 3"
     }
 ];
@@ -114,11 +107,14 @@ window.addEventListener("load", function (event) {
                     `
                 <!-- ========== Slide 1 ========== -->
                 <div class="carousel-item active">
+                <p class="contador-opciones">Opc. 1 de ${producto.length}</p>
                     <div class="card card-product mx-auto">
                         <div class="card-header">
                             ${producto[i].nombre}
                         </div>
-                        <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                        <div class="img-producto-container">
+                            <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                        </div>
                         <div class="card-body">
                             <p class="precio mt-3 mb-1">
                                 Precio: $ ${producto[i].precio}
@@ -136,12 +132,15 @@ window.addEventListener("load", function (event) {
                     `
             <!-- ========== Slide ${i + 1} ========== -->
             <div class="carousel-item">
+            <p class="contador-opciones">Opc. ${i+1} de ${producto.length}</p>
                 <div class="card card-product mx-auto">
                     <div class="card-header">
                         ${producto[i].nombre}
                     </div>
-                    <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
-                    <div class="card-body">
+                    <div class="img-producto-container">
+                        <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                    </div>
+                        <div class="card-body">
                         <p class="precio mt-3 mb-1">
                             Precio: $ ${producto[i].precio}
                         </p>
