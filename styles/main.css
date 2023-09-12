@@ -30,22 +30,29 @@ body {
 
 .name-container {
     display: flex;
-    justify-content: center;
-    align-items: end;
+    align-items: center;
     margin-top: 3rem;
     margin-bottom: 4rem;
+    justify-content: center;
+    width: auto;
 }
 
 .name {
-    color: var(--primmary-color);
+    color: black;
     font-family: 'Oswald', sans-serif;
     font-size: 3.5rem;
-    text-decoration: underline var(--secondary-color);
+    text-align: left;
+    width: auto;
+    line-height: 73%;
+    -webkit-text-stroke: 2px var(--primmary-color);
+    /* text-decoration: underline var(--secondary-color); */
 }
 
 .name-logo {
-    max-width: 5rem;
-    max-height: 5rem;
+    max-width: 8rem;
+    max-height: 8rem;
+    justify-self: end;
+    margin-top: 1rem;
 }
 
 /* =========== Carrusel de banners ========== */
@@ -63,6 +70,7 @@ body {
     margin-top: 5rem;
     margin-bottom: 3rem;
     color: var(--secondary-color);
+    /* -webkit-text-stroke: .5px black; */
     border-radius: 5px;
     font-weight: 700;
     font-family: 'Oswald', sans-serif;
@@ -71,8 +79,8 @@ body {
 
 /* =========== cards ========== */
 
-.contador-opciones{
-color: #5c5c5c;
+.contador-opciones {
+    color: #5c5c5c;
 }
 
 .card-product {
@@ -93,11 +101,9 @@ color: #5c5c5c;
 }
 
 .img-producto-container {
-    width: 16rem;
-    height: 12rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 14rem;
+    display: flex;
 }
 
 .img-producto {
@@ -105,7 +111,8 @@ color: #5c5c5c;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border: var(--border-card-color) 1px solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .precio {
@@ -135,7 +142,7 @@ color: #5c5c5c;
 .subtitle {
     font-size: 1.2rem;
     text-align: justify;
-    color: var(--secondary-color);
+    color: #5c5c5c;
 }
 
 .lista-salsas {
@@ -186,14 +193,37 @@ table {
 
 /* ===========  Contacto ============ */
 
-.contacto-container{
-font-size: 1.5rem;
+.contacto-container {
+    font-size: 1.5rem;
 }
 
-.contact-icon{
+.contact-icon {
     font-size: 2.5rem;
     color: #107446;
     margin-right: 1rem;
+}
+
+.gif-entrega {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #198754;
+}
+
+.gif-entrega img {
+    background-color: #86caea;
+    width: 50%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+.gif-entrega p {
+    font-size: 85%;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 0;
+    color: white;
+    padding: .5rem;
+    font-family: monospace;
 }
 
 /* ===========  Formas de pago ============ */
@@ -429,6 +459,70 @@ footer ul li a {
 
 }
 
+
+@media screen and (max-width: 350px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .name-logo {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .img-producto-container {
+        width: 100%;
+        height: 12rem;
+    }
+
+    .card-header {
+        font-size: 1.3rem;
+    }
+
+    .contacto-container {
+        font-size: 1.3rem;
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .nav-link-mobile {
+        padding: .3rem;
+        width: 9rem;
+    }
+
+    .enlace-whatsapp,
+    .icon-toggle {
+        font-size: 1.2rem;
+    }
+
+    td {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .img-producto-container {
+        height: 20rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .img-producto-container {
+        height: 25rem;
+        width: 100%;
+    }
+}
 
 @media Screen and (min-width:1024px) {
 

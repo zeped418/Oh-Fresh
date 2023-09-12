@@ -1,7 +1,7 @@
 // ============   LOAD  =============
 let desayunos = [
     {
-        nombre: "Chilaquiles</br>sencillos",
+        nombre: "Sencillos",
         precio: "45.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
@@ -9,7 +9,7 @@ let desayunos = [
     },
 
     {
-        nombre: "Chilaquiles</br>con carne",
+        nombre: "Con carne",
         precio: "55.00",
         texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
@@ -113,7 +113,7 @@ window.addEventListener("load", function (event) {
                             ${producto[i].nombre}
                         </div>
                         <div class="img-producto-container">
-                            <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                            <img src= ${producto[i].imagen} class="img-producto" alt=${producto[i].alt}>
                         </div>
                         <div class="card-body">
                             <p class="precio mt-3 mb-1">
@@ -138,7 +138,7 @@ window.addEventListener("load", function (event) {
                         ${producto[i].nombre}
                     </div>
                     <div class="img-producto-container">
-                        <img src= ${producto[i].imagen} class="card-img-top img-producto" alt=${producto[i].alt}>
+                        <img src= ${producto[i].imagen} class="img-producto" alt=${producto[i].alt}>
                     </div>
                         <div class="card-body">
                         <p class="precio mt-3 mb-1">
