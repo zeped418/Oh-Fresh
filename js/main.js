@@ -73,6 +73,10 @@ let snacks = [
 window.addEventListener("load", function (event) {
     event.preventDefault();
 
+    // obtener el ancho de pantalla
+    const ancho = document.documentElement.clientWidth;
+
+
     // ++++++++++++++++++ Carruseles de productos ++++++++++++++++++++++++
 
     let carruseles = this.document.querySelectorAll(".carousel-inner");
@@ -107,7 +111,7 @@ window.addEventListener("load", function (event) {
                     `
                 <!-- ========== Slide 1 ========== -->
                 <div class="carousel-item active">
-                <p class="contador-opciones">Opc. 1 de ${producto.length}</p>
+                    <p class="contador-opciones">Opc. 1 de ${producto.length}</p>
                     <div class="card card-product mx-auto">
                         <div class="card-header">
                             ${producto[i].nombre}
@@ -123,7 +127,6 @@ window.addEventListener("load", function (event) {
                                 ${producto[i].texto}
                             </p>
                         </div>
-    
                     </div>
                 </div>
             `);
@@ -132,7 +135,7 @@ window.addEventListener("load", function (event) {
                     `
             <!-- ========== Slide ${i + 1} ========== -->
             <div class="carousel-item">
-            <p class="contador-opciones">Opc. ${i+1} de ${producto.length}</p>
+            <p class="contador-opciones">Opc. ${i + 1} de ${producto.length}</p>
                 <div class="card card-product mx-auto">
                     <div class="card-header">
                         ${producto[i].nombre}
@@ -174,6 +177,67 @@ window.addEventListener("load", function (event) {
         `);
     }
 
+    //Función para reutilizar código en cada producto
+    function createProductCard(container, products, containerId) {
+        let cols = products.length;
+        if (cols >= 4) {
+            cols = 4;
+        }
+    
+        container.insertAdjacentHTML("afterbegin", `
+            <div class="row row-cols-1 row-cols-md-${cols} container mx-auto justify-content-around" id="${containerId}">
+            </div>
+        `);
+    
+        const productContainer = document.getElementById(containerId);
+        products.forEach((product) => {
+            const productItemHTML = `
+                <div class="col">
+                    <div class="card mx-auto mt-3 mb-3">
+                        <div class="card-header">
+                            ${product.nombre}
+                        </div>
+                        <div class="img-producto-container">
+                            <img src="${product.imagen}" class="img-producto" alt="${product.alt}">
+                        </div>
+                        <div class="card-body">
+                            <p class="precio mt-3 mb-1">
+                                Precio: $ ${product.precio}
+                            </p>
+                            <p class="card-text mt-3 mb-3">
+                                ${product.texto}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+    
+            productContainer.insertAdjacentHTML("beforeend", productItemHTML);
+        });
+    }
+    
+    // Llama a la función para crear las cards de desayunos de escritorio
+    createProductCard(
+        document.getElementById('Desayunos-escritorio-container'),
+        desayunos,
+        'Desayunos-escritorio'
+    );
+    
+    // Llama a la función para crear las cards de bebidas de escritorio
+    createProductCard(
+        document.getElementById('Bebidas-escritorio-container'),
+        bebidas,
+        'Bebidas-escritorio'
+    );
+    
+    // Llama a la función para crear las cards de snacks de escritorio
+    createProductCard(
+        document.getElementById('Snacks-escritorio-container'),
+        snacks,
+        'Snacks-escritorio'
+    );
+
+    //Saludo de bienvenida en la página
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -190,10 +254,9 @@ window.addEventListener("load", function (event) {
         title: '¡Hola, Bienvenid@! 😃'
     })
 
-});// window load{}
+});
 
 // Barra de navegación de móviles
-
 const menu_button = document.getElementById('menu-button');
 
 // Agregar event listeners para cerrar el menú al hacer clic en un elemento de navegación

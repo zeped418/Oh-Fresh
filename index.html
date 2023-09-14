@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oh-Fresh</title>
+    <title>ONE-CHILAKIL</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/calavera.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
@@ -144,35 +145,37 @@
             <div class="text-center">
                 <!-- ================  DESAYUNOS  ================ -->
                 <h1 class="title" id="Desayunos"><i class="uil uil-utensils-alt"></i> </i> CHILAQUILES</h1>
-                <p class="subtitle mb-5 container">1. Prepáralos a tu antojo:</p>
+                <p class="subtitle container">¡Prepáralos a tu antojo! <br> <span style="font-size: .8rem;">Elije la salsa y complementos ideales</span></p>
+                <h4 class="desayuno-subtitle">SALSAS</h4>
+                <div class="mb-5">
+                    <div class="salsa-verde salsa">
+                        <img class="logo-salsa-zoro" src="./src/img/Zoro-icon.png" alt="Zoro">
+                        <span class="verde">Verde</span> <span class="heroe-salsa">Roronoa</span>
+                    </div>
+
+                    <div class="salsa-roja salsa">
+                        <img class="logo-salsa-luffy" src="./src/img/Luffys-flag-2-icon.png" alt="luffy">
+                        <span class="roja">Roja</span> <span class="heroe-salsa">D' Luffy</span>
+                    </div>
+
+                    <div class="salsa-morita salsa">
+                        <img class="logo-salsa-ace" src="./src/img/Ace-icon.png" alt="chopper">
+                        <span class="morita">Morita</span> <span class="heroe-salsa">D' Ace</span>
+                    </div>
+
+                </div>
 
                 <!-- ========== Carrusel de Desayunos ========== -->
                 <div id="carousel-1" class="carousel slide Mobile" data-bs-touch="true">
                     <div class="carousel-inner" id="carousel-desayunos"></div>
                 </div>
-                <div class="mt-5">
-                    <p class="subtitle mb-5 container">Elige la salsa que más te guste:</p>
-                    <div class="lista-salsas">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td><img class="logo-salsa" src="./src/img/Zoro-icon.png" alt="Zoro"></td>
-                                    <td> <span class="verde">Verde</span> <span class="heroe-salsa">Roronoa</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img class="logo-salsa" src="./src/img/Luffys-flag-2-icon.png" alt="luffy"></td>
-                                    <td><span class="roja">Roja</span> <span class="heroe-salsa">D' Luffy</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img class="logo-salsa" src="./src/img/Chopper-icon.png" alt="chopper"></td>
-                                    <td><span class="morita">Morita</span> <span class="heroe-salsa">Chopper</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- ============= Cards de escritorio =============== -->
+                <div class="container mt-3" id="Desayunos-escritorio-container">
                 </div>
-                <div class="mt-5">
-                    <p class="subtitle mb-5 container">Elige los complementos perfectos:</p>
+
+                <!-- Lista de condimentos -->
+                <div class="mt-5" style="display: inline-block;">
+                    <p class="subtitle mb-5 container">Complementos</p>
                     <div class="lista-salsas">
                         <table>
                             <tbody>
@@ -180,7 +183,7 @@
                                     <td class="complementos">🥣</td>
                                     <td class="complementos">Crema</td>
                                     <td class="complementos">🧀</td>
-                                    <td class="complementos">Queso </br> Panela</td>
+                                    <td class="complementos">Q. Panela</td>
                                 </tr>
                                 <tr>
                                     <td class="complementos">🧅</td>
@@ -200,13 +203,16 @@
                 <div id="carousel-2" class="carousel slide Mobile" data-bs-touch="true">
                     <div class="carousel-inner" id="carousel-bebidas"></div>
                 </div>
+                <!-- ============= Cards de escritorio =============== -->
+                <div class="container" id="Bebidas-escritorio-container">
+                </div>
                 <!-- ================  SNACKS  ================ -->
                 <h1 class="title" id="Snacks"><i class="uil uil-grin-tongue-wink"></i> DULCES</h1>
                 <!-- ========== Carrusel de Snacks ========== -->
                 <div id="carousel-3" class="carousel slide Mobile" data-bs-touch="true">
                     <div class="carousel-inner" id="carousel-snacks"></div>
                 </div>
-
+                <div class="container" id="Snacks-escritorio-container"></div>
                 <!-- =========== Versiones Desktop =========== -->
                 <div class="row row-cols-1 row-cols-md-4 desktop">
                     <div class="col d-flex justify-content-center">
