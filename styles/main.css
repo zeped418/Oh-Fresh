@@ -97,7 +97,27 @@ body {
     margin-bottom: 0;
 }
 
+/* =========== carrusel ========== */
 
+.carousel-indicators-dots {
+    position: relative;
+    margin-top: 3rem;
+    color: #333;
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: var(--primmary-color);
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+
+.carousel-indicators-dots li{
+
+    list-style-type: none;
+}
 
 /* =========== cards ========== */
 
