@@ -44,7 +44,7 @@ let desayunos = [
 
 let bebidas = [
     {
-        nombre: "Coca-cola 600 ml",
+        nombre: "Coca-cola 355 ml",
         precio: "20.00",
         texto: "Sumérgete en el sabor clásico que te revitaliza en cualquier momento y lugar.<br>¡Refresca tu sed hoy!",
         imagen: "./src/img/franky-super-coca.png",
