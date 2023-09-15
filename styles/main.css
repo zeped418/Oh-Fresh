@@ -34,6 +34,89 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+/* ===========  Header ============ */
+header {
+    min-width: 100vw;
+    ;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    border-radius: 5%;
+}
+
+.icon-toggle {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.navbar-brand {
+    padding: 0rem 6rem 0rem 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.custom-navbar {
+    background-color: var(--primmary-color);
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.15);
+}
+
+.nav-link:hover {
+    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.35);
+    color: white;
+}
+
+.nav--icon {
+    font-size: 1rem;
+}
+
+.especial {
+    display: none;
+}
+
+.menu-button {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: var(--primmary-color);
+    padding: .4rem;
+}
+
+.icon-menu {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.botones-navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: .5rem 0 .5rem 0;
+}
+
+.enlace-whatsapp {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.btn:hover {
+    background-color: #198754;
+}
+
+/* =========== Main ========== */
+
+.wrapper {
+    flex: 1;
+}
+
 /* =========== Nombre de la empresa ========== */
 
 .name-container {
@@ -308,90 +391,30 @@ body {
     max-width: 80%;
 }
 
+/* ===========  Botón de WhatsApp flotante ============ */
 
-/* ===========  Header ============ */
-header {
-    min-width: 100vw;
-    ;
-}
-
-.nav-item {
-    font-size: 1.5rem;
-    border-radius: 5%;
-}
-
-.icon-toggle {
-    font-size: 1.3rem;
+.whatsapp-flotante{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 20px;
+    right: 20px;
+    background: #107446;
     color: white;
-}
-
-.navbar-brand {
-    padding: 0rem 6rem 0rem 2rem;
-    font-size: 2.5rem;
-    color: white;
-}
-
-.custom-navbar {
-    background-color: var(--primmary-color);
-}
-
-.nav-link {
-    color: white;
-    font-size: 1.2rem;
-    background-color: rgb(30, 30, 30);
-    border-radius: 5px;
+    border-radius: 50px;
     text-align: center;
-    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.15);
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .35);
+    z-index: 100;
 }
 
-.nav-link:hover {
-    box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.35);
-    color: white;
-}
-
-.nav--icon {
-    font-size: 1rem;
-}
-
-.especial {
-    display: none;
-}
-
-.menu-button {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    background-color: var(--primmary-color);
-    padding: .4rem;
-}
-
-.icon-menu {
-    font-size: 1.5rem;
-    margin: 1rem;
-}
-
-.botones-navbar-mobile {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: .5rem 0 .5rem 0;
-}
-
-.enlace-whatsapp {
+.whatsapp-flotante:hover{
     text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+    color: #107446;
+    background: white;
+    transition:.3s; 
 }
-
-.btn:hover {
-    background-color: #198754;
-}
-
-/* =========== Main ========== */
-
-.wrapper {
-    flex: 1;
-}
-
 /* =========== Footer ========== */
 
 footer {
@@ -543,7 +566,8 @@ footer ul li a {
         visibility: visible;
     }
 
-    .desktop {
+    .desktop,
+    .whatsapp-flotante {
         display: none;
         visibility: hidden;
     }
