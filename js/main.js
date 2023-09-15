@@ -1,17 +1,41 @@
 // ============   LOAD  =============
 let desayunos = [
     {
-        nombre: "Sencillos",
+        nombre: "Chilaquiles Sencillos 👌",
         precio: "45.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        texto: " Deléitate con tortillas crujientes bañadas en una salsa exquisita, coronadas con queso y acompañadas de un toque fresco de crema, cilantro y cebolla.",
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
         alt: "prueba 1"
     },
 
     {
-        nombre: "Con carne",
-        precio: "55.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        nombre: "Chilaquiles con carne <img src='./src/img/luffy-eyes.png' alt='luffy' width='40px'>" ,
+        precio: "65.00",
+        texto: `
+                Acompaña tus deliciosos chilaquiles con una de las siguientes opciones:
+                <div>
+                    <div class="carne">
+                        <p>🥩 Bistec</p>
+                        <p class= "gramos">100 g <p>
+                    </div>                 
+
+                    <div class="carne">
+                        <p>🍖 Costilla</p>
+                        <p class= "gramos">100 g <p>
+                    </div>
+
+                    <div class="carne">
+                        <p>🐥 Pollo</p>
+                        <p class= "gramos">100 g <p>
+                    </div>
+
+                    <div class="carne">
+                        <p>🍳 Huevo</p>
+                        <p class= "gramos">2 pz<p>
+                    </div>
+
+                </div>
+        `,
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
         alt: "prueba 2"
     },
@@ -22,24 +46,24 @@ let bebidas = [
     {
         nombre: "Coca-cola 600 ml",
         precio: "20.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/5/6/560.jpg",
+        texto: "Sumérgete en el sabor clásico que te revitaliza en cualquier momento y lugar.<br>¡Refresca tu sed hoy!",
+        imagen: "./src/img/franky-super-coca.png",
         alt: "prueba 1"
     },
 
     {
         nombre: "Leche Hershey's",
         precio: "15.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://superlavioleta.com/cdn/shop/products/LECHEHERSHEYCHOCOLATE236.jpg?v=1597161383",
+        texto: "Disfruta del placer del chocolate con la Leche Hershey's. Su sabor intenso te envolverán en dulce deleite.",
+        imagen: "./src/img/hersheys.png",
         alt: "prueba 2"
     },
 
     {
         nombre: "Agua Bonafont 1L",
         precio: "15.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://images.rappi.com.mx/products/b9f56379-c76c-48b3-a654-a17dc3666752.jpg?d=128x128&e=webp&q=70",
+        texto: "Refresca tu sed con la inigualable pureza de Agua Bonafont en su presentación de 1 litro. Hidratación para todos los guerreros.",
+        imagen: "./src/img/bonafont.png",
         alt: "prueba 3"
     }
 ];
@@ -120,8 +144,8 @@ window.addEventListener("load", function (event) {
                             <img src= ${producto[i].imagen} class="img-producto" alt=${producto[i].alt}>
                         </div>
                         <div class="card-body">
-                            <p class="precio mt-3 mb-1">
-                                Precio: $ ${producto[i].precio}
+                            <p class="precio mt-3 mb-1 text-center">
+                                $ ${producto[i].precio}
                             </p>
                             <p class="card-text mt-3 mb-3">
                                 ${producto[i].texto}
@@ -144,8 +168,8 @@ window.addEventListener("load", function (event) {
                         <img src= ${producto[i].imagen} class="img-producto" alt=${producto[i].alt}>
                     </div>
                         <div class="card-body">
-                        <p class="precio mt-3 mb-1">
-                            Precio: $ ${producto[i].precio}
+                        <p class="precio mt-3 mb-1 text-center">
+                            $ ${producto[i].precio}
                         </p>
                         <p class="card-text mt-3 mb-3">
                             ${producto[i].texto}
@@ -193,7 +217,7 @@ window.addEventListener("load", function (event) {
         products.forEach((product) => {
             const productItemHTML = `
                 <div class="col">
-                    <div class="card mx-auto mt-3 mb-3">
+                    <div class="card card-desktop mx-auto mt-3 mb-3">
                         <div class="card-header">
                             ${product.nombre}
                         </div>
@@ -201,8 +225,8 @@ window.addEventListener("load", function (event) {
                             <img src="${product.imagen}" class="img-producto" alt="${product.alt}">
                         </div>
                         <div class="card-body">
-                            <p class="precio mt-3 mb-1">
-                                Precio: $ ${product.precio}
+                            <p class="precio mt-3 mb-1 text-center">
+                                $ ${product.precio}
                             </p>
                             <p class="card-text mt-3 mb-3">
                                 ${product.texto}

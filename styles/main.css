@@ -104,15 +104,20 @@ body {
     color: #5c5c5c;
 }
 
+.card-desktop{
+    border: 1px solid var(--border-card-color);
+}
+
 .card-product {
     width: 70%;
     border: var(--border-card-color) 1px solid;
 }
 
 .card-header {
-    background-color: var(--primmary-color);
+    background-color: rgb(30, 30, 30);
     color: white;
     font-size: 1.5rem;
+    text-transform: uppercase;
     padding: 1rem;
     border-bottom: none;
 }
@@ -169,6 +174,14 @@ body {
     margin-top: 2rem;
 }
 
+.carne{
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
 .verde,
 .roja,
 .morita {
@@ -199,7 +212,10 @@ body {
     /* border: red 1px solid; */
     text-align: center;
     padding: 1rem 0.5rem 2rem .5rem;
+}
 
+.gramos{
+    font-size: .8rem;
 }
 
 /* ===========  Contacto ============ */
@@ -264,6 +280,7 @@ body {
     letter-spacing: 2px;
     border-radius: 5px;
     padding: .3rem;
+    text-transform: uppercase;
 }
 
 .card-pago {
@@ -287,21 +304,6 @@ body {
 .forma-pago-logo img {
     max-height: 80%;
     max-width: 80%;
-}
-
-.efectivo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.efectivo-container span {
-    padding: 0 1rem 0 1rem;
-}
-
-.efectivo-logo {
-    font-size: 4rem;
-    color: rgb(44, 141, 60);
 }
 
 
@@ -334,7 +336,7 @@ header {
 .nav-link {
     color: white;
     font-size: 1.2rem;
-    background-color: var(--secondary-color);
+    background-color: rgb(30, 30, 30);
     border-radius: 5px;
     text-align: center;
     box-shadow: 2px 2px 2px rgba(14, 14, 14, 0.15);
@@ -587,8 +589,10 @@ footer ul li a {
         font-size: 1.3rem;
         font-weight: bold;
         transition: .3s;
-
     }
 
+    .img-producto-container{
+        margin-top: 1.5rem;
+    }
 
 }
