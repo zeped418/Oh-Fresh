@@ -81,7 +81,7 @@ body {
 
 .title {
     font-size: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -98,6 +98,9 @@ body {
 }
 
 /* =========== carrusel ========== */
+.carousel{
+    margin-bottom: 1rem;
+}
 
 .carousel-indicators-dots {
     position: relative;
@@ -105,6 +108,9 @@ body {
     color: #333;
 }
 
+.carousel-indicators{
+    margin-bottom: 0;
+}
 .carousel-indicators [data-bs-target]{
     background-color: var(--primmary-color);
     margin-left: 15px;
@@ -263,31 +269,6 @@ body {
     margin-right: 1rem;
 }
 
-.gif-entrega {
-    display: flex;
-    margin-top: 2rem;
-    background-color: #198754;
-}
-
-.gif-entrega img {
-    background-color: #86caea;
-    width: 50%;
-    height: 100%;
-    transform: scaleX(-1);
-}
-
-.gif-entrega p {
-    font-size: 200%;
-    /* max-width: 100%; */
-    overflow-wrap: break-word;
-    width: 50%;
-    align-self: center;
-    margin-bottom: 0;
-    color: white;
-    padding: .5rem;
-    font-family: monospace;
-    text-align: center;
-}
 
 /* ===========  Formas de pago ============ */
 .forma-pago-titulo {

@@ -29,14 +29,14 @@ let desayunos = [
 
                 </div>
         `,
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "./src/products/carne.jpg",
         alt: "prueba 2"
     },
     {
         nombre: "Chilaquiles Sencillos 👌",
         precio: "45.00",
         texto: " Deléitate con tortillas crujientes bañadas en una salsa exquisita, coronadas con queso y acompañadas de un toque fresco de crema, cilantro y cebolla.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        imagen: "./src/products/sencillos.jpg",
         alt: "prueba 1"
     }
 
@@ -47,7 +47,7 @@ let bebidas = [
         nombre: "Coca-cola 355 ml",
         precio: "20.00",
         texto: "Sumérgete en el sabor clásico que te revitaliza en cualquier momento y lugar.<br>¡Refresca tu sed hoy!",
-        imagen: "./src/img/franky-super-coca.png",
+        imagen: "./src/products/franky-super-coca.png",
         alt: "prueba 1"
     },
 
@@ -55,7 +55,7 @@ let bebidas = [
         nombre: "Leche Hershey's",
         precio: "15.00",
         texto: "Disfruta del placer del chocolate con la Leche Hershey's. Su sabor intenso te envolverán en dulce deleite.",
-        imagen: "./src/img/hersheys.png",
+        imagen: "./src/products/hersheys.png",
         alt: "prueba 2"
     },
 
@@ -63,7 +63,7 @@ let bebidas = [
         nombre: "Agua Bonafont 1L",
         precio: "15.00",
         texto: "Refresca tu sed con la inigualable pureza de Agua Bonafont en su presentación de 1 litro. Hidratación para todos los guerreros.",
-        imagen: "./src/img/bonafont.png",
+        imagen: "./src/products/bonafont.png",
         alt: "prueba 3"
     }
 ];
@@ -71,25 +71,25 @@ let bebidas = [
 let snacks = [
     {
         nombre: "Cheetos",
-        precio: "15.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://www.tasteboutique.com/cdn/shop/products/Fotos-tienda-en-linea-Feb2023_0024_23_600x.png?v=1676579633",
+        precio: "16.00",
+        texto: "¡Siente el fuego con Cheetos Flaming Hot! Crujientes, picantes y adictivos. Perfectos para los amantes del sabor intenso.",
+        imagen: "./src/products/cheetos.png",
         alt: "prueba 1"
     },
 
     {
         nombre: "KitKat",
         precio: "20.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://www.pngkit.com/png/full/213-2131521_kitkat-4-fingers-kit-kat.png",
+        texto: "La pausa perfecta en tu día. Delicioso y crujiente, un placer irresistible en cada bocado. ¡Haz clutch a tu antojo!",
+        imagen: "./src/products/kitkat.png",
         alt: "prueba 2"
     },
 
     {
         nombre: "Gomitas",
-        precio: "15.00",
-        texto: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        imagen: "https://cdn.shopify.com/s/files/1/0566/4391/1854/products/7501030452508_a3d15601-48a9-4062-8031-7a7875b68ac3.png?v=1674552060",
+        precio: "20.00",
+        texto: "Los panditas son los compañeros perfectos, como Zoro Roronoa. Dulzura y determinación en cada mordisco.",
+        imagen: "./src/products/panditas.png",
         alt: "prueba 3"
     }
 ];
