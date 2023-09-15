@@ -560,7 +560,8 @@ footer ul li a {
 
 
     .nav-table,
-    .btn-whatsapp-nav {
+    .btn-whatsapp-nav,
+    #menu-button {
         display: inline;
         visibility: visible;
     }

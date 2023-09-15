@@ -184,16 +184,16 @@ window.addEventListener("load", function (event) {
 
     //Inserta la estructura de los botones de control de cad carrusel
 
-    for (let i = 1; i < carruseles.length; i++) {
+    for (let i = 2; i < carruseles.length; i++) {
         carruseles[i].insertAdjacentHTML("afterend", `
-        <!-- ========== Controls ${[i]} ========== -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${[i]}"
+        <!-- ========== Controls ${[i-1]} ========== -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${[i-1]}"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
 
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel-${[i]}"
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-${[i-1]}"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
