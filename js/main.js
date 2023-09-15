@@ -1,12 +1,5 @@
 // ============   LOAD  =============
 let desayunos = [
-    {
-        nombre: "Chilaquiles Sencillos 👌",
-        precio: "45.00",
-        texto: " Deléitate con tortillas crujientes bañadas en una salsa exquisita, coronadas con queso y acompañadas de un toque fresco de crema, cilantro y cebolla.",
-        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
-        alt: "prueba 1"
-    },
 
     {
         nombre: "Chilaquiles con carne <img src='./src/img/luffy-eyes.png' alt='luffy' width='40px'>" ,
@@ -39,6 +32,13 @@ let desayunos = [
         imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
         alt: "prueba 2"
     },
+    {
+        nombre: "Chilaquiles Sencillos 👌",
+        precio: "45.00",
+        texto: " Deléitate con tortillas crujientes bañadas en una salsa exquisita, coronadas con queso y acompañadas de un toque fresco de crema, cilantro y cebolla.",
+        imagen: "https://img0.didiglobal.com/static/soda_public/do1_QNjfuQLCJG6eeNMC3kB7?x-s3-process=image/resize,m_mfit,w_1200,image/format,webp",
+        alt: "prueba 1"
+    }
 
 ];
 
